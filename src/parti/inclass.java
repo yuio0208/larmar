@@ -74,7 +74,7 @@ public class inclass {
 						} else if (a3 == 2 || a3 == 3 || a3 == 4 || a3 == 5) {
 							break;
 						} else { 
-							System.out.println("뭐냐");
+							System.out.println("뭐냐\n");
 							a3 = sc3.nextInt();  // 왜 여기서 break를 안걸어 줬지?
 							
 						}
