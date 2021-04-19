@@ -38,8 +38,8 @@ public class Ru {
 		
 		
 		
-		System.out.println("°¡°İÀº " + price + "¿ø ÀÔ´Ï´Ù");
-		System.out.println("°¨»çÇÕ´Ï´Ù\n");
+		System.out.println("ê°€ê²©ì€ " + price + "ì› ì…ë‹ˆë‹¤");
+		System.out.println("ê°ì‚¬í•©ë‹ˆë‹¤\n");
 		
 		
 		runclass.inputFin();

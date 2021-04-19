@@ -5,31 +5,31 @@ import java.util.Scanner;
 public class inclass {
 	
 	
-				public static int inputType() {   // inputType ÇÔ¼ö¿¡ ¾Æ¹«°Íµµ ¾È³Ö¾îµµ return°ªÀ» int·Î ¹ŞÀ½ 
-					System.out.printf("±ÇÁ¾À» ¼±ÅÃÇÏ¼¼¿ä.\n1. ÁÖ°£±Ç \n2. ¾ß°£±Ç\n"); 
+				public static int inputType() {   // inputType í•¨ìˆ˜ì— ì•„ë¬´ê²ƒë„ ì•ˆë„£ì–´ë„ returnê°’ì„ intë¡œ ë°›ìŒ 
+					System.out.printf("ê¶Œì¢…ì„ ì„ íƒí•˜ì„¸ìš”.\n1. ì£¼ê°„ê¶Œ \n2. ì•¼ê°„ê¶Œ\n"); 
 					Scanner sc = new Scanner(System.in);
 					int a = sc.nextInt();
 				
 					while (true) {
 					if(a != 1 && a != 2) { 
-						System.out.printf("´Ù½Ã\n");	
+						System.out.printf("ë‹¤ì‹œ\n");	
 						a = sc.nextInt();
 					} else {
 						break;
 					}   
 					     
-				}  return a;   // return a´Â inputTypeÀÌ¶û °°À½ , void°¡ ÀÖÀ¸¸é return°ª ¾ø¾îµµ µÊ
+				}  return a;   // return aëŠ” inputTypeì´ë‘ ê°™ìŒ , voidê°€ ìˆìœ¼ë©´ returnê°’ ì—†ì–´ë„ ë¨
 				}
 				
 				
 				public static String inputNum() {
-					System.out.printf("ÁÖ¹Î¹øÈ£ ¾ÕÀÚ¸®¸¦ ÀÔ·ÂÇÏ¼¼¿ä. \n");
+					System.out.printf("ì£¼ë¯¼ë²ˆí˜¸ ì•ìë¦¬ë¥¼ ì…ë ¥í•˜ì„¸ìš”. \n");
 					Scanner sc1 = new Scanner(System.in);
 					String a1 = sc1.next();
 					
 					while (true) {
 					if (a1.length() != 6) {
-						System.out.printf("¾ÕÀÚ¸®¸¸ÀÌ¶ó°í\n");
+						System.out.printf("ì•ìë¦¬ë§Œì´ë¼ê³ \n");
 						a1 = sc1.next();
 					} else {
 						break;
@@ -41,13 +41,13 @@ public class inclass {
 				
 				public static int inputTh() { 
 			
-					System.out.printf("¸î°³¸¦ ÁÖ¹®ÇÏ½Ã°Ú½À´Ï±î? (ÃÖ´ë 10°³) \n");
+					System.out.printf("ëª‡ê°œë¥¼ ì£¼ë¬¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (ìµœëŒ€ 10ê°œ) \n");
 					Scanner sc2 = new Scanner(System.in);
 					int a2 = sc2.nextInt();
 					
 					while (true) {
 					if(a2 > 10) {
-						System.out.printf("ÃÖ´ë 10°³¶ó°í\n");
+						System.out.printf("ìµœëŒ€ 10ê°œë¼ê³ \n");
 						a2 = sc2.nextInt();
 					} else if (a2 <= 10) {
 						break;
@@ -58,24 +58,24 @@ public class inclass {
 				
 						
 				public static int inputWu() { 
-					System.out.printf("¿ì´ë»çÇ×À» ¼±ÅÃÇÏ¼¼¿ä.\n"
-							+ "1. ¾øÀ½ (³ªÀÌ ¿ì´ë´Â ÀÚµ¿Ã³¸®)\n"
-							+ "2. Àå¾ÖÀÎ\n"
-							+ "3. ±¹°¡À¯°øÀÚ\n"
-							+ "4. ´ÙÀÚ³à\n"
-							+ "5. ÀÓ»êºÎ\n");
+					System.out.printf("ìš°ëŒ€ì‚¬í•­ì„ ì„ íƒí•˜ì„¸ìš”.\n"
+							+ "1. ì—†ìŒ (ë‚˜ì´ ìš°ëŒ€ëŠ” ìë™ì²˜ë¦¬)\n"
+							+ "2. ì¥ì• ì¸\n"
+							+ "3. êµ­ê°€ìœ ê³µì\n"
+							+ "4. ë‹¤ìë…€\n"
+							+ "5. ì„ì‚°ë¶€\n");
 					Scanner sc3 = new Scanner(System.in);
 					int a3 = sc3.nextInt();
 					
 					while (true) {
 						if(a3 == 1) {
-							System.out.println("ÀÚµ¿Ã³¸®");
+							System.out.println("ìë™ì²˜ë¦¬");
 							break;
 						} else if (a3 == 2 || a3 == 3 || a3 == 4 || a3 == 5) {
 							break;
 						} else { 
-							System.out.println("¹¹³Ä\n");
-							a3 = sc3.nextInt();  // ¿Ö ¿©±â¼­ break¸¦ ¾È°É¾î ÁáÁö?
+							System.out.println("ë­ëƒ\n");
+							a3 = sc3.nextInt();  // ì™œ ì—¬ê¸°ì„œ breakë¥¼ ì•ˆê±¸ì–´ ì¤¬ì§€?
 							
 						}
 					}
@@ -85,19 +85,19 @@ public class inclass {
 				
 				
 				public static int inputFin() {
-					System.out.printf("°è¼Ó ¹ß±Ç ÇÏ½Ã°Ú½À´Ï±î?\n"
-							+ "1. Æ¼ÄÏ ¹ß±Ç\n"
-							+ "2. Á¾·á\n");
+					System.out.printf("ê³„ì† ë°œê¶Œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n"
+							+ "1. í‹°ì¼“ ë°œê¶Œ\n"
+							+ "2. ì¢…ë£Œ\n");
 					Scanner sc4 = new Scanner(System.in);
 					int a4 = sc4.nextInt();
 					
 					while (true) { 
 						if(a4 == 1 || a4 ==2) {
-							System.out.println("Æ¼ÄÏ ¹ß±ÇÀ» Á¾·áÇÕ´Ï´Ù. °¨»çÇÕ´Ï´Ù.");
+							System.out.println("í‹°ì¼“ ë°œê¶Œì„ ì¢…ë£Œí•©ë‹ˆë‹¤. ê°ì‚¬í•©ë‹ˆë‹¤.");
 							break;
 							
 						} else { 
-							System.out.println("µ¹¾Æ°¡");
+							System.out.println("ëŒì•„ê°€");
 							break;
 							
 						}
@@ -109,7 +109,7 @@ public class inclass {
 				
 				public static int pricePrint() {
 					System.out.printf("\n");
-					System.out.printf("==============¿¡¹ö·£µå=============\n");
+					System.out.printf("==============ì—ë²„ëœë“œ=============\n");
 					return 0;
 					
 					
