@@ -4,50 +4,55 @@ import java.util.Scanner;
 
 public class Ru {
 
-	public static void main(String[] args) {
+	public static void main45(String[] args) {
 		// TODO Auto-generated method stub
 
 		cal inputclass = new cal();
 
-		int a = 0;
-		String a1 = "";
-		int a2 = 0;
-		int a3 = 0;
-		int a4 = 0;
-		int a5 = 0;
+		int NDPrint = 0;
+		String Jumin = "";
+		int JangSuPrint = 0;
+		int WDPrint = 0;
+		int FinPrint = 0;
+		int ZZinMack = 0;
+		int i = 0;
 		do {
-
+			write wr = new write();
 			inclass runclass = new inclass();
 
-			a = runclass.inputType();
-			a1 = runclass.inputNum();
-			a2 = runclass.inputTh();
-			a3 = runclass.inputWu();
+			NDPrint = runclass.inputType();
+			Jumin = runclass.inputJuMin();
+			JangSuPrint = runclass.inputJangSu();
+			WDPrint = runclass.inputWuDae();
 
-			int cb = (int) inputclass.age(Integer.parseInt(a1));
-			int price = inputclass.agePay(cb, a2, a);
-			double cut = cal.cutpay(a3 - 1);
-			int sum = (int) (price * (1 - cut));
+			int ManNaI = (int) inputclass.age(Integer.parseInt(Jumin));
+			int price = inputclass.agePay(ManNaI, JangSuPrint, NDPrint);
+			double Discout = cal.CutPrice(WDPrint - 1);
+			int SumPrice = (int) (price * (1 - Discout));
 
-			System.out.println("가격은 " + (int) (price * (1 - cut)) + "원 입니다");
+			System.out.println("가격은 " + SumPrice + "원 입니다");
 			System.out.println("감사합니다\n");
+			System.out.printf("계속 발권 하시겠습니까?\n" + "1. 티켓 발권\n" + "2. 종료\n");
 
-			a4 = runclass.inputFin(a, a2, cb, sum);
+			FinPrint = runclass.inputFin(NDPrint, WDPrint, ManNaI, SumPrice, WDPrint);
+			// FinPrint = Integer.parseInt(wr.addList(price, JangSuPrint, ManNaI,
+			
 
-			if (a4 == 2) {
+			Scanner re = new Scanner(System.in);
+			if (FinPrint == 2) {
 
 				System.out.println("계속 진행 (1: 새로운 주문, 2: 프로그램 종료)");
-				Scanner re = new Scanner(System.in);
-				a5 = re.nextInt();
-				if (a5 == 1) {
 
-				} else if (a5 == 2) {
+				ZZinMack = re.nextInt();
+				if (ZZinMack == 1) {
+
+				} else if (ZZinMack == 2) {
 					break;
+
+				} else {
+					System.out.println("다시해");
+					ZZinMack = re.nextInt();
 				}
-
-			} else if (a4 >= 3) {
-				System.out.println("다시해");
-
 			}
 
 		} while (true);

@@ -24,7 +24,7 @@ public class inclass {
 		return a; // return a는 inputType이랑 같음 , void가 있으면 return값 없어도 됨
 	}
 
-	public static String inputNum() {
+	public static String inputJuMin() {
 		System.out.printf("주민번호 앞자리를 입력하세요. \n");
 		Scanner sc1 = new Scanner(System.in);
 		String a1 = sc1.next();
@@ -41,7 +41,7 @@ public class inclass {
 
 	}
 
-	public static int inputTh() {
+	public static int inputJangSu() {
 
 		System.out.printf("몇개를 주문하시겠습니까? (최대 10개) \n");
 		Scanner sc2 = new Scanner(System.in);
@@ -58,7 +58,7 @@ public class inclass {
 		return a2;
 	}
 
-	public static int inputWu() {
+	public static int inputWuDae() {
 		System.out.printf(
 				"우대사항을 선택하세요.\n" + "1. 없음 (나이 우대는 자동처리)\n" + "2. 장애인\n" + "3. 국가유공자\n" + "4. 다자녀\n" + "5. 임산부\n");
 		Scanner sc3 = new Scanner(System.in);
@@ -80,57 +80,52 @@ public class inclass {
 		return a3;
 	}
 
-	Ru yan = new Ru();
+	public static int inputFin(int NightDay, int JangSu, int NaI, int GaGyeok, int WDNumber) {
 
-	public static int inputFin(int NightDay, int JangSu, int NaI, int GaGyuk) {
-		System.out.printf("계속 발권 하시겠습니까?\n" + "1. 티켓 발권\n" + "2. 종료\n");
 		Scanner sc = new Scanner(System.in);
-		Ru bobos = new Ru();
 		int kanwye = sc.nextInt();
-		ArrayList<String> array = new ArrayList<String>();
-		String abc = null;
-		
+
+		String ND = "";
+
 		if (kanwye == 2) {
-			
-			abc = pricePrint(NightDay);
-			
+
+			ND = NightDayPrint(NightDay);
+
 			if (NaI > 19) {
 				System.out.printf("어른 X  ");
 				System.out.print(JangSu + "\t");
-				System.out.print(GaGyuk + "원  ");
-				Wu(JangSu);
+				System.out.print(GaGyeok + "원  ");
+				WuDae(JangSu);
 
 			} else if (NaI > 10) {
 				System.out.printf("청소년 X  ");
 				System.out.print(JangSu + "\t");
-				System.out.print(GaGyuk + "원  ");
-				Wu(JangSu);
+				System.out.print(GaGyeok + "원  ");
+				WuDae(JangSu);
 
 			} else {
 				System.out.printf("잼민이 X  ");
 				System.out.print(JangSu + "\t");
-				System.out.print(GaGyuk + "원  ");
-				Wu(JangSu);
+				System.out.print(GaGyeok + "원  ");
+				WuDae(JangSu);
 
 			}
 		}
-		array.add(abc);
-		
-		
-		System.out.printf("=========================================\n");
+
+		// System.out.printf("=========================================\n");
 		return kanwye;
 
 	}
 
 	Ru inclass = new Ru();
 
-	public static String pricePrint(int a) {
+	public static String NightDayPrint(int NightDay) {
 
 		System.out.println("티켓 발권을 종료합니다. 잘가");
 		System.out.printf("\n");
 		System.out.printf("===============Juice WRLD================\n");
 		String aaa = null;
-		switch (a) {
+		switch (NightDay) {
 		case 1:
 			aaa = "주간권";
 			System.out.printf("주간권  ");
@@ -149,7 +144,7 @@ public class inclass {
 
 	Ru aka = new Ru();
 
-	public static int Wu(int a) {
+	public static int WuDae(int a) {
 
 		if (a == 1) {
 			System.out.printf("*우대적용없음\n");
